@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluar nota</title>
+    <script>
+        function calcular(){
+            //obtener valor de la nota
+            let xn = document.getElementById('txtNota').value;
+            //verificara si la nota esta en el rango 0 y 20 
+            if (xn >= 0 && xn <=20){
+                if (xn >=11){
+                    document.getElementById('txtRes').value="Aprobado"
+                    document.getElementById('txtRes').style.color="blue"
+                    document.getElementById('txtRes').style.fontWeight="bold"
+
+
+                }else{
+                    document.getElementById('txtRes').value="Desaprobado"
+                    document.getElementById('txtRes').style.color="red"
+                    document.getElementById('txtRes').style.fontWeight="bold"
+
+                }
+
+            }else{
+                alert('Nota errada')
+            }
+        }
+    </script>
+</head>
+<body style="font-weight: bold;">
+    <h1>Nota Final </h1>
+    <hr>
+    <h3>Ingrese nota</h3>
+    <input type="text" name="" id="txtNota">
+    <h3>Resultado</h3>
+    <input type="text" name="" id="txtRes">
+    <hr>
+    <input onclick="calcular();" type="button" value="calcular">   
+</body>
+</html>
